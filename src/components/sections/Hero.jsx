@@ -1,12 +1,12 @@
-import Container from '../ui/Container'
-import Button from '../ui/Button'
-import { hero } from '../../data/data'
+import Container from '../ui/Container';
+import Button from '../ui/Button';
+import { hero } from '../../data/data';
 
 export default function Hero() {
   return (
     <section
       id="beranda"
-      className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-16 pt-28 sm:items-center sm:pb-24 sm:pt-24"
+      className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-16 pt-28 sm:items-center sm:pb-24 sm:pt-24 w-full"
     >
       <img
         src={hero.image.src}
@@ -33,7 +33,12 @@ export default function Hero() {
             <Button href={hero.primaryCta.href} as="a" size="lg">
               {hero.primaryCta.label}
             </Button>
-            <Button href={hero.secondaryCta.href} as="a" size="lg" variant="outline">
+            <Button
+              href={hero.secondaryCta.href}
+              as="a"
+              size="lg"
+              variant="outline"
+            >
               {hero.secondaryCta.label}
             </Button>
           </div>
@@ -51,5 +56,5 @@ export default function Hero() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

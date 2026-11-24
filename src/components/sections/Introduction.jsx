@@ -1,9 +1,9 @@
-import Container from '../ui/Container'
-import { introduction, hero } from '../../data/data'
+import Container from '../ui/Container';
+import { introduction, hero } from '../../data/data';
 
 export default function Introduction() {
   return (
-    <section id="mengenal" className="bg-white py-20 sm:py-28">
+    <section id="mengenal" className="bg-white py-20 sm:py-28 w-full">
       <Container>
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div data-aos="fade-right">
@@ -13,7 +13,9 @@ export default function Introduction() {
             <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
               {introduction.title}
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-muted">{introduction.lead}</p>
+            <p className="mt-5 text-base leading-relaxed text-muted">
+              {introduction.lead}
+            </p>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted">
               {hero.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -32,23 +34,36 @@ export default function Introduction() {
 
         <div className="mt-16 grid gap-10 md:grid-cols-2">
           {introduction.contactTypes.map((type, index) => {
-            const Icon = type.icon
+            const Icon = type.icon;
             return (
-              <article key={type.id} data-aos="fade-up" data-aos-delay={index * 80}>
+              <article
+                key={type.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 80}
+              >
                 <div className="mb-4 text-brand-700">
-                  <Icon className="h-6 w-6" aria-hidden="true" strokeWidth={1.6} />
+                  <Icon
+                    className="h-6 w-6"
+                    aria-hidden="true"
+                    strokeWidth={1.6}
+                  />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-ink">{type.title}</h3>
+                <h3 className="font-display text-xl font-semibold text-ink">
+                  {type.title}
+                </h3>
                 <ul className="mt-4 space-y-2.5">
                   {type.items.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted">
+                    <li
+                      key={item}
+                      className="flex gap-3 text-sm leading-relaxed text-muted"
+                    >
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </article>
-            )
+            );
           })}
         </div>
 
@@ -62,7 +77,10 @@ export default function Introduction() {
             </p>
             <ol className="mt-6 space-y-3">
               {introduction.whyImportant.benefits.map((benefit, index) => (
-                <li key={benefit} className="flex gap-3 text-sm leading-relaxed text-muted">
+                <li
+                  key={benefit}
+                  className="flex gap-3 text-sm leading-relaxed text-muted"
+                >
                   <span className="font-display font-semibold text-brand-700">
                     {index + 1}.
                   </span>
@@ -78,7 +96,10 @@ export default function Introduction() {
             </h3>
             <ul className="mt-6 space-y-3">
               {introduction.whoExecutes.items.map((item) => (
-                <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted">
+                <li
+                  key={item}
+                  className="flex gap-3 text-sm leading-relaxed text-muted"
+                >
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-success-500" />
                   {item}
                 </li>
@@ -88,5 +109,5 @@ export default function Introduction() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
