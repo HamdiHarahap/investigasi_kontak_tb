@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #eef5fb;
+  --color-brand-100: #d6e7f6;
+  --color-brand-200: #aecfee;
+  --color-brand-300: #7bb0e0;
+  --color-brand-400: #4a90cf;
+  --color-brand-500: #2f74b5;
+  --color-brand-600: #245d96;
+  --color-brand-700: #1e4b78;
+  --color-brand-800: #1b3e63;
+  --color-brand-900: #183452;
+
+  --color-accent-50: #fef2f2;
+  --color-accent-100: #fde3e3;
+  --color-accent-500: #dc3b3b;
+  --color-accent-600: #c02828;
+  --color-accent-700: #9f2222;
+
+  --color-success-50: #effaf4;
+  --color-success-100: #d7f2e3;
+  --color-success-500: #2f9e63;
+  --color-success-600: #248050;
+  --color-success-700: #1e6842;
+
+  --color-ink: #152433;
+  --color-muted: #5a6b7b;
+  --color-surface: #f3f7fb;
+  --color-line: #d7e1ec;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
