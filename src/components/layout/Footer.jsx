@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-line bg-ink text-white">
-      <Container className="grid gap-10 py-14 md:grid-cols-2">
+      <Container className="grid grid-cols-2 gap-10 py-14 max-[900px]:grid-cols-1 max-[900px]:gap-8 max-[520px]:py-10">
         <div>
           <div className="mb-4 font-display text-lg font-semibold">{site.name}</div>
           <p className="max-w-md text-sm leading-relaxed text-white/70">
@@ -14,7 +14,10 @@ export default function Footer() {
           </p>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/55">
             Disusun oleh {team.members.length} anggota kelompok. Lihat daftar lengkap di{' '}
-            <a href="#tim" className="text-brand-200 underline-offset-4 hover:text-white hover:underline">
+            <a
+              href="#tim"
+              className="text-brand-200 underline-offset-4 hover:text-white hover:underline"
+            >
               Tim Penyusun
             </a>
             .
@@ -23,7 +26,7 @@ export default function Footer() {
 
         <div>
           <h2 className="mb-4 font-display text-sm font-semibold text-white">Navigasi</h2>
-          <ul className="grid gap-2 sm:grid-cols-2">
+          <ul className="grid grid-cols-2 gap-2 max-[520px]:grid-cols-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a

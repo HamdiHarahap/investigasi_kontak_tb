@@ -79,32 +79,52 @@ export default function Simulation() {
   }
 
   return (
-    <section id="simulasi" className="border-y border-line bg-surface py-20 sm:py-28">
+    <section
+      id="simulasi"
+      className="border-y border-line bg-surface py-28 max-[900px]:py-20 max-[520px]:py-14"
+    >
       <Container>
         <div className="max-w-3xl" data-aos="fade-up">
           <p className="mb-3 text-sm font-semibold tracking-[0.14em] text-brand-700 uppercase">
             {simulationFields.eyebrow}
           </p>
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+          <h2 className="font-display text-4xl font-semibold tracking-tight text-ink max-[520px]:text-3xl">
             {simulationFields.title}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted">
+          <p className="mt-4 text-base leading-relaxed text-muted max-[520px]:text-sm">
             {simulationFields.description}
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted">{simulationFields.sampleHint}</p>
         </div>
 
-        <div className="mt-10 bg-white p-6 sm:p-8" data-aos="fade-up">
-          <div className="mb-6 flex flex-wrap gap-3">
-            <Button type="button" variant="secondary" onClick={fillSample}>
+        <div
+          className="mt-10 bg-white p-8 max-[900px]:mt-8 max-[520px]:p-5"
+          data-aos="fade-up"
+        >
+          <div className="mb-6 flex flex-wrap gap-3 max-[520px]:flex-col">
+            <Button
+              type="button"
+              variant="secondary"
+              onClick={fillSample}
+              className="max-[520px]:w-full"
+            >
               Isi data contoh
             </Button>
-            <Button type="button" variant="secondary" onClick={handleReset}>
+            <Button
+              type="button"
+              variant="secondary"
+              onClick={handleReset}
+              className="max-[520px]:w-full"
+            >
               Reset formulir
             </Button>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="grid gap-5 md:grid-cols-2">
+          <form
+            onSubmit={handleSubmit}
+            noValidate
+            className="grid grid-cols-2 gap-5 max-[900px]:grid-cols-1"
+          >
             <div>
               <Label htmlFor="pasienIndeks" required>
                 Nama pasien indeks
@@ -229,7 +249,7 @@ export default function Simulation() {
               )}
             </div>
 
-            <div className="md:col-span-2">
+            <div className="col-span-2 max-[900px]:col-span-1">
               <Label htmlFor="hasilSkrining" required>
                 Hasil skrining
               </Label>
@@ -246,7 +266,7 @@ export default function Simulation() {
               )}
             </div>
 
-            <div className="md:col-span-2">
+            <div className="col-span-2 max-[900px]:col-span-1">
               <Label htmlFor="statusRujukan" required>
                 Status rujukan
               </Label>
@@ -270,8 +290,8 @@ export default function Simulation() {
               )}
             </div>
 
-            <div className="md:col-span-2">
-              <Button type="submit" size="lg">
+            <div className="col-span-2 max-[900px]:col-span-1">
+              <Button type="submit" size="lg" className="max-[520px]:w-full">
                 Periksa kelengkapan data
               </Button>
             </div>
@@ -280,10 +300,10 @@ export default function Simulation() {
           {result && (
             <div
               role="status"
-              className="mt-8 border-l-4 border-success-500 bg-success-50 px-5 py-4"
+              className="mt-8 border-l-4 border-success-500 bg-success-50 px-5 py-4 max-[520px]:px-4"
             >
               <p className="text-sm font-medium text-success-700">{result.message}</p>
-              <dl className="mt-4 grid gap-2 text-sm text-ink sm:grid-cols-2">
+              <dl className="mt-4 grid grid-cols-2 gap-2 text-sm text-ink max-[520px]:grid-cols-1">
                 <div>
                   <dt className="text-muted">Pasien indeks</dt>
                   <dd className="font-medium">{result.summary.pasienIndeks}</dd>

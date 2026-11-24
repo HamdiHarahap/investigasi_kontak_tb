@@ -39,8 +39,19 @@
     scroll-behavior: smooth;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-white font-sans text-ink antialiased;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
   }
 
   :focus-visible {

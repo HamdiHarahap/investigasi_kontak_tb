@@ -32,19 +32,23 @@ export default function Navbar() {
         solid ? 'border-b border-line/80 bg-white/95 backdrop-blur' : 'bg-transparent',
       ].join(' ')}
     >
-      <Container className="flex h-16 items-center justify-between lg:h-[4.5rem]">
+      <Container className="flex h-[4.5rem] items-center justify-between max-[520px]:h-16">
         <a
           href="#beranda"
           className={[
-            'font-display text-base font-semibold sm:text-lg',
+            'min-w-0 font-display text-lg font-semibold max-[520px]:text-base',
             solid ? 'text-ink' : 'text-white',
           ].join(' ')}
           onClick={closeMenu}
         >
-          {site.name}
+          <span className="max-[520px]:hidden">{site.name}</span>
+          <span className="hidden max-[520px]:inline">{site.shortName}</span>
         </a>
 
-        <nav className="hidden items-center gap-6 xl:flex" aria-label="Navigasi utama">
+        <nav
+          className="flex items-center gap-6 max-[900px]:hidden"
+          aria-label="Navigasi utama"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -61,7 +65,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden xl:block">
+        <div className="max-[900px]:hidden">
           <Button href="#simulasi" as="a" size="sm">
             Simulasi Data
           </Button>
@@ -70,7 +74,7 @@ export default function Navbar() {
         <button
           type="button"
           className={[
-            'inline-flex h-10 w-10 items-center justify-center rounded-md xl:hidden',
+            'hidden h-10 w-10 shrink-0 items-center justify-center rounded-md max-[900px]:inline-flex',
             solid
               ? 'border border-line bg-white text-ink'
               : 'border border-white/30 bg-white/10 text-white',
@@ -86,11 +90,12 @@ export default function Navbar() {
 
       <div
         id="mobile-menu"
-        className={['border-t border-line bg-white xl:hidden', open ? 'block' : 'hidden'].join(
-          ' ',
-        )}
+        className={[
+          'border-t border-line bg-white',
+          open ? 'hidden max-[900px]:block' : 'hidden',
+        ].join(' ')}
       >
-        <Container className="flex flex-col gap-1 py-4">
+        <Container className="flex max-h-[calc(100svh-4rem)] flex-col gap-1 overflow-y-auto py-4">
           {navLinks.map((link) => (
             <a
               key={link.href}

@@ -7,13 +7,13 @@ export default function Faq() {
   const [openId, setOpenId] = useState(faqItems[0].id)
 
   return (
-    <section id="faq" className="bg-white py-20 sm:py-28">
+    <section id="faq" className="bg-white py-28 max-[900px]:py-20 max-[520px]:py-14">
       <Container>
         <div className="max-w-3xl" data-aos="fade-up">
           <p className="mb-3 text-sm font-semibold tracking-[0.14em] text-brand-700 uppercase">
             Tanya Jawab
           </p>
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+          <h2 className="font-display text-4xl font-semibold tracking-tight text-ink max-[520px]:text-3xl">
             Pertanyaan yang Sering Diajukan
           </h2>
         </div>
@@ -25,23 +25,23 @@ export default function Faq() {
               <div key={item.id}>
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                  className="flex w-full items-start justify-between gap-4 py-5 text-left max-[520px]:py-4"
                   aria-expanded={isOpen}
                   onClick={() => setOpenId(isOpen ? null : item.id)}
                 >
-                  <span className="font-display text-base font-semibold text-ink sm:text-lg">
+                  <span className="min-w-0 font-display text-lg font-semibold text-ink max-[520px]:text-base">
                     {item.question}
                   </span>
                   <ChevronDown
                     className={[
-                      'h-5 w-5 shrink-0 text-brand-700 transition-transform',
+                      'mt-1 h-5 w-5 shrink-0 text-brand-700 transition-transform',
                       isOpen ? 'rotate-180' : '',
                     ].join(' ')}
                     aria-hidden="true"
                   />
                 </button>
                 {isOpen && (
-                  <p className="pb-5 text-sm leading-relaxed text-muted sm:text-base">
+                  <p className="pb-5 text-base leading-relaxed text-muted max-[520px]:pb-4 max-[520px]:text-sm">
                     {item.answer}
                   </p>
                 )}
