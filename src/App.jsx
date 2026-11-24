@@ -14,6 +14,7 @@ import Dashboard from './components/sections/Dashboard'
 import Simulation from './components/sections/Simulation'
 import Faq from './components/sections/Faq'
 import Closing from './components/sections/Closing'
+import Team from './components/sections/Team'
 
 export default function App() {
   useAOS()
@@ -35,6 +36,7 @@ export default function App() {
         <Simulation />
         <Faq />
         <Closing />
+        <Team />
       </main>
       <Footer />
     </>

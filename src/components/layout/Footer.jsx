@@ -1,5 +1,5 @@
 import Container from '../ui/Container'
-import { site, navLinks } from '../../data/data'
+import { site, navLinks, team } from '../../data/data'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -11,6 +11,13 @@ export default function Footer() {
           <div className="mb-4 font-display text-lg font-semibold">{site.name}</div>
           <p className="max-w-md text-sm leading-relaxed text-white/70">
             {site.shortDescription}
+          </p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/55">
+            Disusun oleh {team.members.length} anggota kelompok. Lihat daftar lengkap di{' '}
+            <a href="#tim" className="text-brand-200 underline-offset-4 hover:text-white hover:underline">
+              Tim Penyusun
+            </a>
+            .
           </p>
         </div>
 
@@ -34,7 +41,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <Container className="py-5 text-xs text-white/50">
           <p>
-            © {year} {site.name}. Materi edukasi untuk pembelajaran investigasi kontak TB.
+            © {year} {site.name}. Materi edukasi disusun oleh kelompok pengembang website.
           </p>
         </Container>
       </div>

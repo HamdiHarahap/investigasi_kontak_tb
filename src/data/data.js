@@ -31,6 +31,7 @@ export const navLinks = [
   { label: 'Penginputan', href: '#penginputan' },
   { label: 'Simulasi', href: '#simulasi' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Tim', href: '#tim' },
 ]
 
 export const hero = {
@@ -660,6 +661,23 @@ export const closing = {
     },
   ],
   cta: 'Mari bersama mewujudkan investigasi kontak TB yang lebih terarah, terpantau, dan berkualitas.',
+}
+
+export const team = {
+  eyebrow: 'Tim Penyusun',
+  title: 'Kelompok Pengembang Website',
+  description:
+    'Website edukasi ini disusun oleh delapan anggota kelompok sebagai media pembelajaran panduan penginputan data investigasi kontak TB.',
+  members: [
+    { id: 'm1', name: 'Luna Maryana Manullang', nim: '241000277' },
+    { id: 'm2', name: 'Ruth Elisa Hannaya Br. Tobing', nim: '241000285' },
+    { id: 'm3', name: 'Tyas Pramudita Putri Hidayat', nim: '241000291' },
+    { id: 'm4', name: 'Herlen Mispa Br Maha', nim: '241000298' },
+    { id: 'm5', name: 'Adja Nazwah Syarifahsyah', nim: '241000323' },
+    { id: 'm6', name: 'Fitria Melynda', nim: '241000348' },
+    { id: 'm7', name: 'Tahnia Haura Nabila', nim: '241000367' },
+    { id: 'm8', name: 'Safira Azzahra', nim: '241000370' },
+  ],
 }
 
 export const featureIcons = {
