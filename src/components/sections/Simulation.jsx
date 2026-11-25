@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import Container from '../ui/Container'
-import Label from '../ui/Label'
-import Input from '../ui/Input'
-import Button from '../ui/Button'
-import { simulationFields } from '../../data/data'
+import { useState } from 'react';
+import Container from '../ui/Container';
+import Label from '../ui/Label';
+import Input from '../ui/Input';
+import Button from '../ui/Button';
+import { simulationFields } from '../../data/data';
 
 const initialForm = {
   pasienIndeks: '',
@@ -14,54 +14,58 @@ const initialForm = {
   jenisKontak: '',
   hasilSkrining: '',
   statusRujukan: '',
-}
+};
 
 export default function Simulation() {
-  const [form, setForm] = useState(initialForm)
-  const [errors, setErrors] = useState({})
-  const [result, setResult] = useState(null)
+  const [form, setForm] = useState(initialForm);
+  const [errors, setErrors] = useState({});
+  const [result, setResult] = useState(null);
 
   const handleChange = (event) => {
-    const { name, value } = event.target
-    setForm((prev) => ({ ...prev, [name]: value }))
-    setErrors((prev) => ({ ...prev, [name]: undefined }))
-    setResult(null)
-  }
+    const { name, value } = event.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: undefined }));
+    setResult(null);
+  };
 
   const validate = () => {
-    const next = {}
-    if (!form.pasienIndeks.trim()) next.pasienIndeks = 'Nama pasien indeks wajib diisi.'
-    if (!form.jumlahKeluarga.trim()) next.jumlahKeluarga = 'Jumlah anggota keluarga wajib diisi.'
-    if (!form.namaKontak.trim()) next.namaKontak = 'Nama kontak wajib diisi.'
-    if (!form.usiaKontak.trim()) next.usiaKontak = 'Usia kontak wajib diisi.'
-    if (!form.hubungan) next.hubungan = 'Hubungan wajib dipilih.'
-    if (!form.jenisKontak) next.jenisKontak = 'Jenis kontak wajib dipilih.'
-    if (!form.hasilSkrining.trim()) next.hasilSkrining = 'Hasil skrining wajib diisi.'
-    if (!form.statusRujukan) next.statusRujukan = 'Status rujukan wajib dipilih.'
-    return next
-  }
+    const next = {};
+    if (!form.pasienIndeks.trim())
+      next.pasienIndeks = 'Nama pasien indeks wajib diisi.';
+    if (!form.jumlahKeluarga.trim())
+      next.jumlahKeluarga = 'Jumlah anggota keluarga wajib diisi.';
+    if (!form.namaKontak.trim()) next.namaKontak = 'Nama kontak wajib diisi.';
+    if (!form.usiaKontak.trim()) next.usiaKontak = 'Usia kontak wajib diisi.';
+    if (!form.hubungan) next.hubungan = 'Hubungan wajib dipilih.';
+    if (!form.jenisKontak) next.jenisKontak = 'Jenis kontak wajib dipilih.';
+    if (!form.hasilSkrining.trim())
+      next.hasilSkrining = 'Hasil skrining wajib diisi.';
+    if (!form.statusRujukan)
+      next.statusRujukan = 'Status rujukan wajib dipilih.';
+    return next;
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    const nextErrors = validate()
-    setErrors(nextErrors)
+    event.preventDefault();
+    const nextErrors = validate();
+    setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
-      setResult(null)
-      return
+      setResult(null);
+      return;
     }
 
     setResult({
       message:
         'Latihan berhasil. Data fiktif Anda lengkap dan siap dipelajari sebagai contoh penginputan.',
       summary: form,
-    })
-  }
+    });
+  };
 
   const handleReset = () => {
-    setForm(initialForm)
-    setErrors({})
-    setResult(null)
-  }
+    setForm(initialForm);
+    setErrors({});
+    setResult(null);
+  };
 
   const fillSample = () => {
     setForm({
@@ -73,10 +77,10 @@ export default function Simulation() {
       jenisKontak: 'serumah',
       hasilSkrining: 'Batuk lebih dari 2 minggu, belum pernah pengobatan TB',
       statusRujukan: 'dirujuk',
-    })
-    setErrors({})
-    setResult(null)
-  }
+    });
+    setErrors({});
+    setResult(null);
+  };
 
   return (
     <section
@@ -94,7 +98,9 @@ export default function Simulation() {
           <p className="mt-4 text-base leading-relaxed text-muted max-[520px]:text-sm">
             {simulationFields.description}
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">{simulationFields.sampleHint}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
+            {simulationFields.sampleHint}
+          </p>
         </div>
 
         <div
@@ -138,7 +144,9 @@ export default function Simulation() {
                 error={Boolean(errors.pasienIndeks)}
               />
               {errors.pasienIndeks && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.pasienIndeks}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.pasienIndeks}
+                </p>
               )}
             </div>
 
@@ -157,7 +165,9 @@ export default function Simulation() {
                 error={Boolean(errors.jumlahKeluarga)}
               />
               {errors.jumlahKeluarga && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.jumlahKeluarga}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.jumlahKeluarga}
+                </p>
               )}
             </div>
 
@@ -174,7 +184,9 @@ export default function Simulation() {
                 error={Boolean(errors.namaKontak)}
               />
               {errors.namaKontak && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.namaKontak}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.namaKontak}
+                </p>
               )}
             </div>
 
@@ -193,7 +205,9 @@ export default function Simulation() {
                 error={Boolean(errors.usiaKontak)}
               />
               {errors.usiaKontak && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.usiaKontak}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.usiaKontak}
+                </p>
               )}
             </div>
 
@@ -221,7 +235,9 @@ export default function Simulation() {
                 <option value="lainnya">Lainnya</option>
               </select>
               {errors.hubungan && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.hubungan}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.hubungan}
+                </p>
               )}
             </div>
 
@@ -245,7 +261,9 @@ export default function Simulation() {
                 <option value="erat">Kontak erat</option>
               </select>
               {errors.jenisKontak && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.jenisKontak}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.jenisKontak}
+                </p>
               )}
             </div>
 
@@ -262,7 +280,9 @@ export default function Simulation() {
                 error={Boolean(errors.hasilSkrining)}
               />
               {errors.hasilSkrining && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.hasilSkrining}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.hasilSkrining}
+                </p>
               )}
             </div>
 
@@ -286,7 +306,9 @@ export default function Simulation() {
                 <option value="belum">Belum dirujuk</option>
               </select>
               {errors.statusRujukan && (
-                <p className="mt-1.5 text-sm text-accent-600">{errors.statusRujukan}</p>
+                <p className="mt-1.5 text-sm text-accent-600">
+                  {errors.statusRujukan}
+                </p>
               )}
             </div>
 
@@ -302,7 +324,9 @@ export default function Simulation() {
               role="status"
               className="mt-8 border-l-4 border-success-500 bg-success-50 px-5 py-4 max-[520px]:px-4"
             >
-              <p className="text-sm font-medium text-success-700">{result.message}</p>
+              <p className="text-sm font-medium text-success-700">
+                {result.message}
+              </p>
               <dl className="mt-4 grid grid-cols-2 gap-2 text-sm text-ink max-[520px]:grid-cols-1">
                 <div>
                   <dt className="text-muted">Pasien indeks</dt>
@@ -334,5 +358,5 @@ export default function Simulation() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

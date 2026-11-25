@@ -13,7 +13,7 @@ import {
   Database,
   Activity,
   BarChart3,
-} from 'lucide-react'
+} from 'lucide-react';
 
 export const site = {
   name: 'Investigasi Kontak TB',
@@ -22,7 +22,7 @@ export const site = {
     'Optimalisasi Sistem Informasi Kesehatan dalam Mendukung Pelacakan Kontak TB yang Akurat, Cepat, dan Terintegrasi.',
   shortDescription:
     'Panduan penginputan data investigasi kontak tuberkulosis untuk petugas kesehatan, kader, dan masyarakat.',
-}
+};
 
 export const navLinks = [
   { label: 'Beranda', href: '#beranda' },
@@ -32,7 +32,7 @@ export const navLinks = [
   { label: 'Simulasi', href: '#simulasi' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Tim', href: '#tim' },
-]
+];
 
 export const hero = {
   brand: 'Panduan Penginputan Data',
@@ -54,7 +54,7 @@ export const hero = {
     src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=80',
     alt: 'Petugas kesehatan memeriksa data dan melayani pasien',
   },
-}
+};
 
 export const introduction = {
   eyebrow: 'Mengenal Investigasi Kontak TB',
@@ -110,7 +110,7 @@ export const introduction = {
       'Masyarakat dan keluarga pasien sebagai pihak yang membantu memberikan informasi dan mendukung pelaksanaan kegiatan.',
     ],
   },
-}
+};
 
 export const problems = {
   eyebrow: 'Permasalahan',
@@ -168,7 +168,7 @@ export const problems = {
       ],
     },
   ],
-}
+};
 
 export const impacts = {
   eyebrow: 'Dampak',
@@ -209,7 +209,7 @@ export const impacts = {
   ],
   message:
     'Data yang akurat membantu petugas mengambil keputusan yang tepat. Setiap kontak yang ditemukan harus dicatat, diperiksa sesuai alur, dan dipantau tindak lanjutnya.',
-}
+};
 
 export const flowSteps = [
   {
@@ -297,7 +297,8 @@ export const flowSteps = [
     number: '05',
     title: 'Rujukan dan Pemeriksaan',
     summary: 'Mengarahkan kontak bergejala ke fasilitas kesehatan.',
-    purpose: 'Memperbarui hasil pemeriksaan pada pencatatan atau sistem yang digunakan.',
+    purpose:
+      'Memperbarui hasil pemeriksaan pada pencatatan atau sistem yang digunakan.',
     content:
       'Kontak yang menunjukkan gejala atau memenuhi kriteria pemeriksaan diarahkan ke fasilitas pelayanan kesehatan. Petugas kesehatan melakukan penilaian dan pemeriksaan sesuai pedoman yang berlaku.',
     itemsTitle: 'Hasil tindak lanjut dapat berupa',
@@ -314,7 +315,8 @@ export const flowSteps = [
     title: 'Pemantauan dan Tindak Lanjut',
     summary: 'Memastikan setiap kontak mendapat pemantauan berkelanjutan.',
     purpose: 'Menjaga agar tidak ada kontak yang hilang dari pemantauan.',
-    content: 'Petugas kesehatan melakukan pemantauan terhadap kontak yang telah diidentifikasi.',
+    content:
+      'Petugas kesehatan melakukan pemantauan terhadap kontak yang telah diidentifikasi.',
     itemsTitle: 'Hal yang perlu dipantau',
     items: [
       'Apakah kontak sudah datang ke fasilitas kesehatan?',
@@ -347,12 +349,13 @@ export const flowSteps = [
       'Jumlah kontak yang masih memerlukan tindak lanjut.',
     ],
   },
-]
+];
 
 export const dataGuide = {
   eyebrow: 'Tutorial',
   title: 'Panduan Penginputan Data Investigasi Kontak TB',
-  description: 'Bagian ini dibuat khusus sebagai tutorial bagi pengguna website.',
+  description:
+    'Bagian ini dibuat khusus sebagai tutorial bagi pengguna website.',
   tables: [
     {
       id: 'pasien-indeks',
@@ -368,7 +371,11 @@ export const dataGuide = {
         ['5', 'Alamat', 'Alamat tempat tinggal'],
         ['6', 'Nomor telepon', 'Nomor yang dapat dihubungi'],
         ['7', 'Tanggal diagnosis', 'Tanggal penetapan diagnosis'],
-        ['8', 'Fasilitas kesehatan', 'Puskesmas/rumah sakit tempat pasien berobat'],
+        [
+          '8',
+          'Fasilitas kesehatan',
+          'Puskesmas/rumah sakit tempat pasien berobat',
+        ],
       ],
     },
     {
@@ -396,7 +403,8 @@ export const dataGuide = {
     {
       id: 'hasil-skrining',
       title: 'C. Data Hasil Skrining',
-      intro: 'Bagian ini digunakan untuk mencatat hasil skrining awal setiap kontak.',
+      intro:
+        'Bagian ini digunakan untuk mencatat hasil skrining awal setiap kontak.',
       headers: ['No.', 'Informasi', 'Keterangan'],
       rows: [
         ['1', 'Riwayat batuk', 'Ada/tidak'],
@@ -421,7 +429,11 @@ export const dataGuide = {
         ['4', 'Tanggal pemeriksaan', 'Tanggal kontak menjalani pemeriksaan'],
         ['5', 'Jenis pemeriksaan', 'Sesuai pemeriksaan yang dilakukan'],
         ['6', 'Hasil pemeriksaan', 'Diisi berdasarkan hasil resmi'],
-        ['7', 'Tindak lanjut', 'Pemeriksaan lanjutan/pengobatan/TPT atau lainnya'],
+        [
+          '7',
+          'Tindak lanjut',
+          'Pemeriksaan lanjutan/pengobatan/TPT atau lainnya',
+        ],
       ],
     },
   ],
@@ -443,7 +455,7 @@ export const dataGuide = {
       'Selesai ditindaklanjuti',
     ],
   },
-}
+};
 
 export const roles = {
   eyebrow: 'Pembagian Tugas',
@@ -499,7 +511,7 @@ export const roles = {
       ],
     },
   ],
-}
+};
 
 export const tips = {
   eyebrow: 'Checklist',
@@ -520,7 +532,8 @@ export const tips = {
   ],
   privacy: {
     title: 'Perlindungan Data dan Kerahasiaan',
-    description: 'Data pasien TB merupakan informasi kesehatan yang harus dilindungi.',
+    description:
+      'Data pasien TB merupakan informasi kesehatan yang harus dilindungi.',
     items: [
       'Jangan menyebarkan identitas pasien melalui media sosial atau grup umum.',
       'Gunakan akun yang diberikan kepada pengguna berwenang.',
@@ -530,7 +543,7 @@ export const tips = {
       'Jangan menggunakan data pasien untuk kepentingan di luar pelayanan dan program kesehatan.',
     ],
   },
-}
+};
 
 export const examples = {
   eyebrow: 'Contoh Pengisian',
@@ -569,7 +582,7 @@ export const examples = {
       correct: true,
     },
   ],
-}
+};
 
 export const dashboardStats = {
   eyebrow: 'Dashboard Contoh',
@@ -584,7 +597,7 @@ export const dashboardStats = {
     { id: 'belum', label: 'Belum diperiksa', value: 23, icon: FileWarning },
     { id: 'tindak', label: 'Perlu tindak lanjut', value: 15, icon: BarChart3 },
   ],
-}
+};
 
 export const simulationFields = {
   eyebrow: 'Simulasi',
@@ -593,7 +606,7 @@ export const simulationFields = {
     'Latih pengisian formulir dengan data pasien fiktif. Formulir ini tidak menyimpan data pasien sebenarnya.',
   sampleHint:
     'Contoh data fiktif: pasien indeks “Budi Santoso”, 2 anggota keluarga, kontak “Siti Aminah”, usia 34 tahun, istri, kontak serumah.',
-}
+};
 
 export const faqItems = [
   {
@@ -638,7 +651,7 @@ export const faqItems = [
     answer:
       'Jangan sebarkan identitas melalui media sosial atau grup umum, gunakan akun resmi, jangan bagikan kata sandi, batasi akses sesuai tugas, dan gunakan data hanya untuk pelayanan serta program kesehatan.',
   },
-]
+];
 
 export const closing = {
   title: 'Bersama Kita Putus Rantai Penularan TB!',
@@ -661,7 +674,7 @@ export const closing = {
     },
   ],
   cta: 'Mari bersama mewujudkan investigasi kontak TB yang lebih terarah, terpantau, dan berkualitas.',
-}
+};
 
 export const team = {
   eyebrow: 'Tim Penyusun',
@@ -678,11 +691,33 @@ export const team = {
     { id: 'm7', name: 'Tahnia Haura Nabila', nim: '241000367' },
     { id: 'm8', name: 'Safira Azzahra', nim: '241000370' },
   ],
-}
+};
+
+export const references = {
+  eyebrow: 'REFERENSI',
+  title: 'Landasan dan Pedoman',
+  description:
+    'Sistem ini dikembangkan dengan mengacu pada pedoman dan ketentuan resmi Kementerian Kesehatan Republik Indonesia terkait pelaksanaan program tuberkulosis.',
+  items: [
+    {
+      id: 1,
+      institution: 'Kementerian Kesehatan Republik Indonesia',
+      year: 2023,
+      title:
+        'Surat Edaran Nomor HK.02.02/C/2175/2023 tentang Pelaksanaan Investigasi Kontak dan Terapi Pencegahan TBC.',
+    },
+    {
+      id: 2,
+      institution: 'Kementerian Kesehatan Republik Indonesia',
+      year: 2023,
+      title: 'Petunjuk Teknis Penggunaan Sistem Informasi Tuberkulosis (SITB).',
+    },
+  ],
+};
 
 export const featureIcons = {
   AlertTriangle,
   CheckCircle2,
   ClipboardList,
   Shield,
-}
+};
